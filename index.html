@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abel Hazi - QA Engineer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --border: #e2e8f0;
+            --accent: #8b5cf6;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Mobile menu toggle */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-primary);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-subtitle {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.875rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        #about {
+            background: var(--bg-secondary);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-primary);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -3.4rem;
+            top: 0.25rem;
+            width: 1rem;
+            height: 1rem;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid var(--bg-primary);
+        }
+
+        .timeline-item.current .timeline-dot {
+            background: var(--accent);
+            box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .timeline-company {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .timeline-date {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .timeline-description {
+            color: var(--text-secondary);
+            margin-top: 1rem;
+        }
+
+        .timeline-highlights {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .timeline-highlights li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .timeline-highlights li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-company {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .nda-badge {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Skills Section */
+        #skills {
+            background: var(--bg-secondary);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--bg-primary);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+        }
+
+        .skill-category h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-item {
+            background: var(--bg-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            min-width: 2rem;
+        }
+
+        .contact-details h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-details a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 3rem;
+            height: 3rem;
+            background: var(--bg-secondary);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+                border-bottom: 1px solid var(--border);
+                display: none;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline-dot {
+                left: -2.4rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Abel Hazi</div>
+            <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+                <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="hero-subtitle">QA Engineer</div>
+                <h1>Hi, I'm Abel Hazi</h1>
+                <p>I ensure quality across mobile, console, and PC platforms with 2+ years of experience in manual testing, certification, and leading small QA teams to deliver stable, high-quality game releases.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Dedicated QA professional with a passion for delivering exceptional gaming experiences</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a QA Engineer based in Warsaw, Poland, with over 2 years of experience in the gaming industry. I specialize in manual, functional, and regression testing across mobile, PC, console, and handheld platforms.</p>
+                    <p>My experience spans from working on high-traffic mobile titles like Hay Day (Supercell) to conducting platform-specific certification testing for PlayStation, Xbox, and Nintendo Switch. I've led small testing teams, managed complete feature testing lifecycles, and collaborated directly with developers to ensure quality releases.</p>
+                    <p>I'm passionate about gaming, technology, and continuous improvement. When I'm not testing games, you'll find me building PCs, playing guitar, or working on personal projects.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Years of QA Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Projects Tested</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Platform Certifications</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Testing Tools</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Work Experience</h2>
+                <p>My professional journey in quality assurance</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item current">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-title">QA Engineer</div>
+                            <div class="timeline-company">SnoopGame QA</div>
+                        </div>
+                        <div class="timeline-date">Mar 2026 – Present</div>
+                    </div>
+                    <div class="timeline-description">
+                        Conducting certification testing across PlayStation, Xbox, and Nintendo Switch platforms
+                    </div>
+                    <ul class="timeline-highlights">
+                        <li>Platform-specific compliance testing following TRC and TCR guidelines</li>
+                        <li>Testing across iOS, Android, Windows, macOS, Steam Deck, and VR environments</li>
+                        <li>Managing defect lifecycle in Jira and contributing to CI/CD initiatives</li>
+                        <li>Collaborating with development teams on platform-specific requirements</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-title">Mid/Senior QA Tester</div>
+                            <div class="timeline-company">TransPerfect</div>
+                        </div>
+                        <div class="timeline-date">Jul 2025 – Feb 2026</div>
+                    </div>
+                    <div class="timeline-description">
+                        Led testing for new features on Hay Day (Supercell), a high-traffic mobile game
+                    </div>
+                    <ul class="timeline-highlights">
+                        <li>Owned complete feature testing from development through live release</li>
+                        <li>Created and maintained comprehensive test cases in TestRail</li>
+                        <li>Led sub-team of 2-3 testers, coordinating daily efforts and onboarding</li>
+                        <li>Validated IAPs and LiveOps configurations using SQL queries</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-title">Junior/Mid QA Tester</div>
+                            <div class="timeline-company">Lionbridge Games</div>
+                        </div>
+                        <div class="timeline-date">Jun 2024 – Jul 2025</div>
+                    </div>
+                    <div class="timeline-description">
+                        Executed functional, regression, and exploratory testing across multiple platforms
+                    </div>
+                    <ul class="timeline-highlights">
+                        <li>Performed testing across PC, console, and handheld platforms</li>
+                        <li>Maintained Jira defect database and TestRail documentation</li>
+                        <li>Communicated with production teams on priorities and testing plans</li>
+                        <li>Supported build verification and regression cycles</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Notable games and projects I've worked on</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🌾</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Hay Day</h3>
+                        <span class="project-company">Supercell</span>
+                        <p class="project-description">Led feature testing for a high-traffic mobile farming game. Owned complete testing lifecycle from early development through live release, managing test cases and coordinating a sub-team.</p>
+                        <div class="project-tags">
+                            <span class="tag">iOS</span>
+                            <span class="tag">Android</span>
+                            <span class="tag">LiveOps</span>
+                            <span class="tag">IAP Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">💘</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Date Everything</h3>
+                        <span class="project-company">Team17</span>
+                        <p class="project-description">Conducted comprehensive QA testing for this unique dating simulation game, ensuring quality across multiple platforms and build verification.</p>
+                        <div class="project-tags">
+                            <span class="tag">PC</span>
+                            <span class="tag">Console</span>
+                            <span class="tag">Functional Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🎮</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Online Co-op Game #1</h3>
+                        <span class="project-company">Confidential Client</span>
+                        <p class="project-description">Performed extensive multiplayer testing, focusing on network stability, matchmaking, and co-op gameplay mechanics across platforms.</p>
+                        <div class="project-tags">
+                            <span class="tag nda-badge">NDA</span>
+                            <span class="tag">Multiplayer</span>
+                            <span class="tag">Cross-platform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🎮</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Online Co-op Game #2</h3>
+                        <span class="project-company">Confidential Client</span>
+                        <p class="project-description">Tested online cooperative gameplay features, validating server connectivity, player synchronization, and edge case scenarios.</p>
+                        <div class="project-tags">
+                            <span class="tag nda-badge">NDA</span>
+                            <span class="tag">Multiplayer</span>
+                            <span class="tag">Server Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🔫</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Extraction Shooter</h3>
+                        <span class="project-company">Confidential Client</span>
+                        <p class="project-description">Conducted detailed testing for an extraction-based shooter, focusing on combat mechanics, inventory systems, and competitive balance.</p>
+                        <div class="project-tags">
+                            <span class="tag nda-badge">NDA</span>
+                            <span class="tag">Shooter</span>
+                            <span class="tag">PvPvE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🎯</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Console Certification</h3>
+                        <span class="project-company">Multiple Projects</span>
+                        <p class="project-description">Specialized in platform certification testing for PlayStation, Xbox, and Nintendo Switch, ensuring compliance with TRC and TCR requirements.</p>
+                        <div class="project-tags">
+                            <span class="tag">PlayStation</span>
+                            <span class="tag">Xbox</span>
+                            <span class="tag">Switch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills & Technologies</h2>
+                <p>Tools and methodologies I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Testing Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Jira</span>
+                        <span class="skill-item">TestRail</span>
+                        <span class="skill-item">Confluence</span>
+                        <span class="skill-item">Postman</span>
+                        <span class="skill-item">SQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Platforms</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">PlayStation</span>
+                        <span class="skill-item">Xbox</span>
+                        <span class="skill-item">Nintendo Switch</span>
+                        <span class="skill-item">iOS</span>
+                        <span class="skill-item">Android</span>
+                        <span class="skill-item">Steam Deck</span>
+                        <span class="skill-item">VR</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Methodologies</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Agile/Scrum</span>
+                        <span class="skill-item">SDLC</span>
+                        <span class="skill-item">STLC</span>
+                        <span class="skill-item">Black Box Testing</span>
+                        <span class="skill-item">Regression Testing</span>
+                        <span class="skill-item">Functional Testing</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">C++</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">SQL</span>
+                        <span class="skill-item">HTML/CSS</span>
+                        <span class="skill-item">Unreal Engine 5</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Certification Testing</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">TRC (Sony)</span>
+                        <span class="skill-item">TCR (Microsoft)</span>
+                        <span class="skill-item">Lotcheck (Nintendo)</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">English (Fluent)</span>
+                        <span class="skill-item">Azerbaijani (Native)</span>
+                        <span class="skill-item">Turkish (Fluent)</span>
+                        <span class="skill-item">Polish (Beginner)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Let's discuss your next project</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:haziabel10@gmail.com">haziabel10@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <a href="tel:+48536396487">+48 536 396 487</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p style="color: var(--text-secondary);">Warsaw, Poland</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/abelhazi" target="_blank" class="social-link" title="LinkedIn">in</a>
+                        <a href="mailto:haziabel10@gmail.com" class="social-link" title="Email">✉</a>
+                    </div>
+                </div>
+
+                <div style="background: var(--bg-secondary); padding: 3rem; border-radius: 1rem; border: 1px solid var(--border);">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">Why Work With Me?</h3>
+                    <ul class="timeline-highlights">
+                        <li>2+ years of hands-on QA experience in the gaming industry</li>
+                        <li>Proven track record with high-profile titles like Hay Day (Supercell)</li>
+                        <li>Platform certification expertise (PlayStation, Xbox, Nintendo Switch)</li>
+                        <li>Strong team leadership and collaboration skills</li>
+                        <li>Multilingual communication abilities</li>
+                        <li>Passion for gaming and quality assurance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Abel Hazi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.remove('active');
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.style.color = 'var(--primary)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
