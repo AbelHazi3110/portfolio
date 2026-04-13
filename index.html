@@ -10,7 +10,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+ 
         :root {
             --primary: #2563eb;
             --primary-dark: #1e40af;
@@ -21,14 +21,14 @@
             --border: #e2e8f0;
             --accent: #8b5cf6;
         }
-
+ 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
             background: var(--bg-primary);
         }
-
+ 
         /* Navigation */
         nav {
             position: fixed;
@@ -40,7 +40,7 @@
             z-index: 1000;
             padding: 1rem 0;
         }
-
+ 
         nav .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -49,30 +49,30 @@
             justify-content: space-between;
             align-items: center;
         }
-
+ 
         nav .logo {
             font-weight: 700;
             font-size: 1.25rem;
             color: var(--primary);
         }
-
+ 
         nav ul {
             list-style: none;
             display: flex;
             gap: 2rem;
         }
-
+ 
         nav a {
             text-decoration: none;
             color: var(--text-secondary);
             font-weight: 500;
             transition: color 0.3s;
         }
-
+ 
         nav a:hover {
             color: var(--primary);
         }
-
+ 
         /* Mobile menu toggle */
         .mobile-toggle {
             display: none;
@@ -82,18 +82,18 @@
             cursor: pointer;
             color: var(--text-primary);
         }
-
+ 
         /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-
+ 
         section {
             padding: 5rem 0;
         }
-
+ 
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -101,37 +101,37 @@
             align-items: center;
             padding-top: 80px;
         }
-
+ 
         .hero-content {
             max-width: 800px;
         }
-
+ 
         .hero-subtitle {
             color: var(--primary);
             font-weight: 600;
             font-size: 1.125rem;
             margin-bottom: 0.5rem;
         }
-
+ 
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 800;
             margin-bottom: 1rem;
             line-height: 1.1;
         }
-
+ 
         .hero p {
             font-size: 1.25rem;
             color: var(--text-secondary);
             margin-bottom: 2rem;
         }
-
+ 
         .hero-buttons {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
         }
-
+ 
         .btn {
             padding: 0.875rem 2rem;
             border-radius: 0.5rem;
@@ -143,96 +143,96 @@
             cursor: pointer;
             font-size: 1rem;
         }
-
+ 
         .btn-primary {
             background: var(--primary);
             color: white;
         }
-
+ 
         .btn-primary:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
         }
-
+ 
         .btn-secondary {
             background: transparent;
             color: var(--text-primary);
             border: 2px solid var(--border);
         }
-
+ 
         .btn-secondary:hover {
             border-color: var(--primary);
             color: var(--primary);
         }
-
+ 
         /* Section Headers */
         .section-header {
             text-align: center;
             margin-bottom: 4rem;
         }
-
+ 
         .section-header h2 {
             font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 1rem;
         }
-
+ 
         .section-header p {
             color: var(--text-secondary);
             font-size: 1.125rem;
             max-width: 600px;
             margin: 0 auto;
         }
-
+ 
         /* About Section */
         #about {
             background: var(--bg-secondary);
         }
-
+ 
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: start;
         }
-
+ 
         .about-text p {
             margin-bottom: 1.5rem;
             color: var(--text-secondary);
             font-size: 1.125rem;
         }
-
+ 
         .about-stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
-
+ 
         .stat-card {
             background: var(--bg-primary);
             padding: 2rem;
             border-radius: 1rem;
             border: 1px solid var(--border);
         }
-
+ 
         .stat-number {
             font-size: 2.5rem;
             font-weight: 800;
             color: var(--primary);
             margin-bottom: 0.5rem;
         }
-
+ 
         .stat-label {
             color: var(--text-secondary);
             font-weight: 500;
         }
-
+ 
         /* Experience Timeline */
         .timeline {
             position: relative;
             padding-left: 3rem;
         }
-
+ 
         .timeline::before {
             content: '';
             position: absolute;
@@ -242,18 +242,18 @@
             width: 2px;
             background: var(--border);
         }
-
+ 
         .timeline-item {
             position: relative;
             margin-bottom: 3rem;
             padding-bottom: 3rem;
             border-bottom: 1px solid var(--border);
         }
-
+ 
         .timeline-item:last-child {
             border-bottom: none;
         }
-
+ 
         .timeline-dot {
             position: absolute;
             left: -3.4rem;
@@ -264,12 +264,12 @@
             border-radius: 50%;
             border: 3px solid var(--bg-primary);
         }
-
+ 
         .timeline-item.current .timeline-dot {
             background: var(--accent);
             box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2);
         }
-
+ 
         .timeline-header {
             display: flex;
             justify-content: space-between;
@@ -278,53 +278,53 @@
             flex-wrap: wrap;
             gap: 0.5rem;
         }
-
+ 
         .timeline-title {
             font-size: 1.5rem;
             font-weight: 700;
         }
-
+ 
         .timeline-company {
             color: var(--primary);
             font-weight: 600;
         }
-
+ 
         .timeline-date {
             color: var(--text-secondary);
             font-weight: 500;
         }
-
+ 
         .timeline-description {
             color: var(--text-secondary);
             margin-top: 1rem;
         }
-
+ 
         .timeline-highlights {
             list-style: none;
             margin-top: 1rem;
         }
-
+ 
         .timeline-highlights li {
             padding-left: 1.5rem;
             position: relative;
             margin-bottom: 0.5rem;
             color: var(--text-secondary);
         }
-
+ 
         .timeline-highlights li::before {
             content: '▹';
             position: absolute;
             left: 0;
             color: var(--primary);
         }
-
+ 
         /* Projects Grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
-
+ 
         .project-card {
             background: var(--bg-primary);
             border: 1px solid var(--border);
@@ -332,12 +332,12 @@
             overflow: hidden;
             transition: all 0.3s;
         }
-
+ 
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-
+ 
         .project-image {
             width: 100%;
             height: 200px;
@@ -349,35 +349,35 @@
             font-size: 3rem;
             font-weight: 800;
         }
-
+ 
         .project-content {
             padding: 2rem;
         }
-
+ 
         .project-title {
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
-
+ 
         .project-company {
             color: var(--primary);
             font-weight: 600;
             margin-bottom: 1rem;
             display: block;
         }
-
+ 
         .project-description {
             color: var(--text-secondary);
             margin-bottom: 1.5rem;
         }
-
+ 
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
         }
-
+ 
         .tag {
             background: var(--bg-secondary);
             color: var(--text-secondary);
@@ -386,42 +386,42 @@
             font-size: 0.875rem;
             font-weight: 500;
         }
-
+ 
         .nda-badge {
             background: var(--accent);
             color: white;
         }
-
+ 
         /* Skills Section */
         #skills {
             background: var(--bg-secondary);
         }
-
+ 
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
-
+ 
         .skill-category {
             background: var(--bg-primary);
             padding: 2rem;
             border-radius: 1rem;
             border: 1px solid var(--border);
         }
-
+ 
         .skill-category h3 {
             font-size: 1.25rem;
             margin-bottom: 1.5rem;
             color: var(--primary);
         }
-
+ 
         .skill-list {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
         }
-
+ 
         .skill-item {
             background: var(--bg-secondary);
             padding: 0.5rem 1rem;
@@ -430,7 +430,7 @@
             font-weight: 500;
             font-size: 0.875rem;
         }
-
+ 
         /* Contact Section */
         .contact-grid {
             display: grid;
@@ -438,45 +438,45 @@
             gap: 4rem;
             align-items: center;
         }
-
+ 
         .contact-info {
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
-
+ 
         .contact-item {
             display: flex;
             align-items: start;
             gap: 1rem;
         }
-
+ 
         .contact-icon {
             font-size: 1.5rem;
             color: var(--primary);
             min-width: 2rem;
         }
-
+ 
         .contact-details h3 {
             font-size: 1.125rem;
             margin-bottom: 0.25rem;
         }
-
+ 
         .contact-details a {
             color: var(--text-secondary);
             text-decoration: none;
         }
-
+ 
         .contact-details a:hover {
             color: var(--primary);
         }
-
+ 
         .social-links {
             display: flex;
             gap: 1rem;
             margin-top: 2rem;
         }
-
+ 
         .social-link {
             width: 3rem;
             height: 3rem;
@@ -490,13 +490,13 @@
             font-size: 1.5rem;
             transition: all 0.3s;
         }
-
+ 
         .social-link:hover {
             background: var(--primary);
             color: white;
             transform: translateY(-3px);
         }
-
+ 
         /* Footer */
         footer {
             background: var(--text-primary);
@@ -504,17 +504,17 @@
             text-align: center;
             padding: 2rem 0;
         }
-
+ 
         footer p {
             color: rgba(255, 255, 255, 0.7);
         }
-
+ 
         /* Responsive */
         @media (max-width: 768px) {
             .mobile-toggle {
                 display: block;
             }
-
+ 
             nav ul {
                 position: fixed;
                 top: 70px;
@@ -527,47 +527,47 @@
                 border-bottom: 1px solid var(--border);
                 display: none;
             }
-
+ 
             nav ul.active {
                 display: flex;
             }
-
+ 
             .hero h1 {
                 font-size: 2.5rem;
             }
-
+ 
             .about-content,
             .contact-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-
+ 
             .projects-grid {
                 grid-template-columns: 1fr;
             }
-
+ 
             .timeline {
                 padding-left: 2rem;
             }
-
+ 
             .timeline-dot {
                 left: -2.4rem;
             }
-
+ 
             .section-header h2 {
                 font-size: 2rem;
             }
-
+ 
             section {
                 padding: 3rem 0;
             }
         }
-
+ 
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
-
+ 
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -579,7 +579,7 @@
                 transform: translateY(0);
             }
         }
-
+ 
         .fade-in {
             animation: fadeInUp 0.6s ease-out;
         }
@@ -595,13 +595,14 @@
                 <li><a href="#home" onclick="closeMenu()">Home</a></li>
                 <li><a href="#about" onclick="closeMenu()">About</a></li>
                 <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+                <li><a href="#projects" onclick="closeMenu()">QA Projects</a></li>
+                <li><a href="#personal-projects" onclick="closeMenu()">Personal</a></li>
                 <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
                 <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
             </ul>
         </div>
     </nav>
-
+ 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
@@ -616,7 +617,7 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- About Section -->
     <section id="about">
         <div class="container">
@@ -651,7 +652,7 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- Experience Section -->
     <section id="experience">
         <div class="container">
@@ -679,7 +680,7 @@
                         <li>Collaborating with development teams on platform-specific requirements</li>
                     </ul>
                 </div>
-
+ 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-header">
@@ -699,7 +700,7 @@
                         <li>Validated IAPs and LiveOps configurations using SQL queries</li>
                     </ul>
                 </div>
-
+ 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-header">
@@ -722,12 +723,12 @@
             </div>
         </div>
     </section>
-
-    <!-- Projects Section -->
+ 
+    <!-- QA Projects Section -->
     <section id="projects">
         <div class="container">
             <div class="section-header">
-                <h2>Featured Projects</h2>
+                <h2>QA Projects</h2>
                 <p>Notable games and projects I've worked on</p>
             </div>
             <div class="projects-grid">
@@ -745,7 +746,7 @@
                         </div>
                     </div>
                 </div>
-
+ 
                 <div class="project-card">
                     <div class="project-image">💘</div>
                     <div class="project-content">
@@ -759,7 +760,7 @@
                         </div>
                     </div>
                 </div>
-
+ 
                 <div class="project-card">
                     <div class="project-image">🎮</div>
                     <div class="project-content">
@@ -773,7 +774,7 @@
                         </div>
                     </div>
                 </div>
-
+ 
                 <div class="project-card">
                     <div class="project-image">🎮</div>
                     <div class="project-content">
@@ -787,7 +788,7 @@
                         </div>
                     </div>
                 </div>
-
+ 
                 <div class="project-card">
                     <div class="project-image">🔫</div>
                     <div class="project-content">
@@ -801,7 +802,7 @@
                         </div>
                     </div>
                 </div>
-
+ 
                 <div class="project-card">
                     <div class="project-image">🎯</div>
                     <div class="project-content">
@@ -818,7 +819,101 @@
             </div>
         </div>
     </section>
-
+ 
+    <!-- Personal Projects Section -->
+    <section id="personal-projects" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Personal Projects</h2>
+                <p>Side projects showcasing full-stack development and AI integration</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" style="grid-column: 1 / -1; max-width: 900px; margin: 0 auto;">
+                    <div class="project-image" style="background: linear-gradient(135deg, #10b981, #3b82f6); height: 250px; font-size: 4rem;">
+                        🚀
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">HireEU - AI Job Assistant</h3>
+                        <span class="project-company">Full-Stack Web Application</span>
+                        <p class="project-description">
+                            An AI-powered job matching platform for foreigners seeking employment in Poland and the EU. Built from scratch with a modern tech stack, featuring intelligent CV parsing, job matching with 75%+ accuracy threshold, and automated cover letter generation. Successfully launched with 20+ organic signups within 48 hours across diverse expat communities.
+                        </p>
+                        <div style="margin: 1.5rem 0;">
+                            <h4 style="font-weight: 600; margin-bottom: 0.75rem; color: var(--text-primary);">Key Features:</h4>
+                            <ul class="timeline-highlights" style="margin-left: 0;">
+                                <li>AI-powered CV parsing and job matching using Groq API (Llama 4 Scout)</li>
+                                <li>Multi-API integration (JSearch, Adzuna, Arbeitnow, Remotive) with deduplication</li>
+                                <li>Smart filtering: English-only jobs, citizenship requirements, Poland prioritization</li>
+                                <li>Deterministic scoring algorithm with experience, skills, and seniority matching</li>
+                                <li>Serverless architecture on Vercel with Neon Postgres (Frankfurt, GDPR-compliant)</li>
+                                <li>Custom email automation via Nodemailer and Gmail SMTP</li>
+                            </ul>
+                        </div>
+                        <div style="margin: 1.5rem 0;">
+                            <h4 style="font-weight: 600; margin-bottom: 0.75rem; color: var(--text-primary);">Tech Stack:</h4>
+                            <div class="project-tags" style="margin-bottom: 1rem;">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">Vercel</span>
+                                <span class="tag">Neon Postgres</span>
+                                <span class="tag">Groq API</span>
+                                <span class="tag">Serverless Functions</span>
+                                <span class="tag">RESTful APIs</span>
+                            </div>
+                        </div>
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+                            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <a href="https://hireeu.vercel.app" target="_blank" class="btn btn-primary" style="text-decoration: none; padding: 0.75rem 1.5rem;">
+                                    View Live Site →
+                                </a>
+                                <a href="https://github.com/AbelHazi3110/hireeu-vercel" target="_blank" class="btn btn-secondary" style="text-decoration: none; padding: 0.75rem 1.5rem;">
+                                    View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                        <div style="margin-top: 1.5rem; background: var(--bg-secondary); padding: 1rem; border-radius: 0.5rem; border-left: 3px solid var(--primary);">
+                            <strong style="color: var(--primary);">Impact:</strong> Achieved 17-23 organic signups from diverse communities (Azerbaijani, African, Indian, Latin American, Arabic expats) through strategic Facebook group outreach and LinkedIn posts. No paid advertising used.
+                        </div>
+                    </div>
+                </div>
+ 
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+                        💼
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">QA Portfolio Website</h3>
+                        <span class="project-company">Personal Branding</span>
+                        <p class="project-description">Modern, responsive portfolio website showcasing QA engineering experience and projects. Built with vanilla HTML/CSS/JS for optimal performance and SEO.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Responsive Design</span>
+                            <span class="tag">Vercel</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+                        🎸
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">More Projects Coming Soon</h3>
+                        <span class="project-company">In Development</span>
+                        <p class="project-description">Currently exploring new project ideas combining AI, automation, and web development. Stay tuned for updates!</p>
+                        <div class="project-tags">
+                            <span class="tag">AI/ML</span>
+                            <span class="tag">Web Apps</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
     <!-- Skills Section -->
     <section id="skills">
         <div class="container">
@@ -837,7 +932,7 @@
                         <span class="skill-item">SQL</span>
                     </div>
                 </div>
-
+ 
                 <div class="skill-category">
                     <h3>Platforms</h3>
                     <div class="skill-list">
@@ -850,7 +945,7 @@
                         <span class="skill-item">VR</span>
                     </div>
                 </div>
-
+ 
                 <div class="skill-category">
                     <h3>Methodologies</h3>
                     <div class="skill-list">
@@ -862,7 +957,7 @@
                         <span class="skill-item">Functional Testing</span>
                     </div>
                 </div>
-
+ 
                 <div class="skill-category">
                     <h3>Technical Skills</h3>
                     <div class="skill-list">
@@ -874,16 +969,16 @@
                         <span class="skill-item">Unreal Engine 5</span>
                     </div>
                 </div>
-
+ 
                 <div class="skill-category">
                     <h3>Certification Testing</h3>
                     <div class="skill-list">
                         <span class="skill-item">TRC (Sony)</span>
-                        <span class="skill-item">XR (Microsoft)</span>
+                        <span class="skill-item">TCR (Microsoft)</span>
                         <span class="skill-item">Lotcheck (Nintendo)</span>
                     </div>
                 </div>
-
+ 
                 <div class="skill-category">
                     <h3>Languages</h3>
                     <div class="skill-list">
@@ -896,7 +991,7 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
@@ -910,10 +1005,10 @@
                         <div class="contact-icon">📧</div>
                         <div class="contact-details">
                             <h3>Email</h3>
-                            <a href="mailto:haziabel10@gmail.com">haziabel10@gmail.com</a>
+                            <a href="/cdn-cgi/l/email-protection#442c253e2d252621287574042329252d286a272b29"><span class="__cf_email__" data-cfemail="8fe7eef5e6eeedeae3bebfcfe8e2eee6e3a1ece0e2">[email&#160;protected]</span></a>
                         </div>
                     </div>
-
+ 
                     <div class="contact-item">
                         <div class="contact-icon">📱</div>
                         <div class="contact-details">
@@ -921,7 +1016,7 @@
                             <a href="tel:+48536396487">+48 536 396 487</a>
                         </div>
                     </div>
-
+ 
                     <div class="contact-item">
                         <div class="contact-icon">📍</div>
                         <div class="contact-details">
@@ -929,13 +1024,13 @@
                             <p style="color: var(--text-secondary);">Warsaw, Poland</p>
                         </div>
                     </div>
-
+ 
                     <div class="social-links">
                         <a href="https://linkedin.com/in/abelhazi" target="_blank" class="social-link" title="LinkedIn">in</a>
-                        <a href="mailto:haziabel10@gmail.com" class="social-link" title="Email">✉</a>
+                        <a href="/cdn-cgi/l/email-protection#98f0f9e2f1f9fafdf4a9a8d8fff5f9f1f4b6fbf7f5" class="social-link" title="Email">✉</a>
                     </div>
                 </div>
-
+ 
                 <div style="background: var(--bg-secondary); padding: 3rem; border-radius: 1rem; border: 1px solid var(--border);">
                     <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">Why Work With Me?</h3>
                     <ul class="timeline-highlights">
@@ -950,26 +1045,26 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2026 Abel Hazi. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
+ 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Mobile menu toggle
         function toggleMenu() {
             const menu = document.getElementById('nav-menu');
             menu.classList.toggle('active');
         }
-
+ 
         function closeMenu() {
             const menu = document.getElementById('nav-menu');
             menu.classList.remove('active');
         }
-
+ 
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -983,7 +1078,7 @@
                 }
             });
         });
-
+ 
         // Active nav link on scroll
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section');
@@ -996,15 +1091,3 @@
                 if (window.scrollY >= sectionTop - 200) {
                     current = section.getAttribute('id');
                 }
-            });
-
-            navLinks.forEach(link => {
-                link.style.color = '';
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.style.color = 'var(--primary)';
-                }
-            });
-        });
-    </script>
-</body>
-</html>
